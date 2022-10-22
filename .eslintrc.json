@@ -16,7 +16,7 @@
   "rules": {
     "indent": [
       "error",
-      "tab",
+      2,
       {
         "SwitchCase": 1,
         "VariableDeclarator": "first",
@@ -57,7 +57,7 @@
     "spaced-comment": ["error", "always"],
     "array-bracket-newline": ["error", { "multiline": true }],
     "array-bracket-spacing": ["error", "never"],
-    "arrow-spacing": "error",
+    // "arrow-spacing": "error",
     "block-spacing": "error",
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
     "comma-spacing": ["error", { "before": false, "after": true }],
@@ -84,6 +84,13 @@
     "no-trailing-spaces": "error",
     "no-whitespace-before-property": "error",
     "object-curly-spacing": ["error", "always"],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
     "space-before-blocks": "error",
     "space-before-function-paren": [
       "error",
