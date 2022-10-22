@@ -8,17 +8,21 @@ import {
   Route,
 } from 'react-router-dom';
 import HomePage from './pages/HomePage';
+import Login from './pages/Login';
 import Layout from './components/Layout';
 import DebugPage from './pages/DebugPage';
 
-const App = () => (
-  <BrowserRouter>
-    <Routes>
-      <Route element={<Layout />}>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/debug" element={<DebugPage />} />
-      </Route>
-    </Routes>
-  </BrowserRouter>
-);
+const App = () => {
+  const isUserLogin = false;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={isUserLogin ? <HomePage /> : <Login />} />
+          <Route path="/debug" element={<DebugPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
 export default App;

@@ -1,3 +1,29 @@
+@import './variables.scss';
+
 body {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: $fontMedium;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  max-width: 1200;
+}
+
+.box {
+  border-radius: 8px;
+
+  &.box-shadow {
+    box-shadow: 1px 1px 7px 0 rgb(129 129 129 / 85%);
+    padding: 0 85px;
+  }
+}
+
+.inner-container {
+  width: 100%;
 }

@@ -1,22 +1,19 @@
-import * as React from "react";
-
-// import Layout from '../components/Layout';
+import * as React from 'react';
+import InputField from '../components/shared/InputField';
+import Button from '../components/shared/Button';
+import './Login.scss';
 
 const Login = () => {
-  <>
-    <form>
-      <label>
-        Username:
-        <input type="text" name="username" />
-      </label>
-      <label>
-        Password:
-        <input type="text" name="password" />
-      </label>
-      <button>Sign in</button>
-      <input type="submit" value="Submit" />
-    </form>
-  </>;
+  return (
+    <div className="box box-shadow login flex-center">
+      <div className="inner-container">
+        <h3>Login</h3>
+        <InputField title="User name" placeholder="Enter user username" />
+        <InputField title="Password" placeholder="Enter your passord" />
+        <Button title="Sign In" />
+      </div>
+    </div>
+  );
 };
 
 export default Login;

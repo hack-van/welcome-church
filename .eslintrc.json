@@ -54,10 +54,12 @@
     "prefer-const": "error",
     "prefer-object-spread": "warn",
     "require-await": "warn",
+    "react/prop-types": [1],
     "spaced-comment": ["error", "always"],
     "array-bracket-newline": ["error", { "multiline": true }],
     "array-bracket-spacing": ["error", "never"],
-    // "arrow-spacing": "error",
+    "arrow-body-style": ["warn", "as-needed"],
+    "arrow-spacing": "error",
     "block-spacing": "error",
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
     "comma-spacing": ["error", { "before": false, "after": true }],
@@ -100,6 +102,7 @@
     "space-infix-ops": "error",
     "switch-colon-spacing": "error",
     "template-curly-spacing": "error",
-    "template-tag-spacing": ["error", "always"]
+    "template-tag-spacing": ["error", "always"],
+    "jsx-a11y/label-has-associated-control": "warn"
   }
 }
