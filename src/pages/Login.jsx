@@ -1,7 +1,7 @@
-import * as React from "react";
-import InputField from "../components/shared/InputField";
-import Button from "../components/shared/Button";
-import "./Login.scss";
+import * as React from 'react';
+import InputField from '../components/shared/InputField';
+import Button from '../components/shared/Button';
+import './Login.scss';
 
 const Login = () => {
   return (

@@ -1,7 +1,7 @@
-import * as React from "react";
-import "./InputField.scss";
+import * as React from 'react';
+import './InputField.scss';
 
-const InputField = ({ title, placeholder = "" }) => {
+const InputField = ({ title, placeholder = '' }) => {
   return (
     <div className="input-wrapper">
       <label>{title}</label>

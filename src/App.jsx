@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 // import logo from './logo.svg';
-import "./App.scss";
+import './App.scss';
 import {
   BrowserRouter,
   Routes,
   // Link,
   Route,
-} from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import Login from "./pages/Login";
-import Layout from "./components/Layout";
+} from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import Login from './pages/Login';
+import Layout from './components/Layout';
 
 const App = () => {
   const isUserLogin = false;
