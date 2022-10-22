@@ -10,6 +10,7 @@ import {
 import HomePage from './pages/HomePage';
 import Login from './pages/Login';
 import Layout from './components/Layout';
+import DebugPage from './pages/DebugPage';
 
 const App = () => {
   const isUserLogin = false;
@@ -18,7 +19,7 @@ const App = () => {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={isUserLogin ? <HomePage /> : <Login />} />
-          {/* <Route path="child" element={<ChildComponent />} /> */}
+          <Route path="/debug" element={<DebugPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
