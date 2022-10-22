@@ -1,0 +1,4 @@
+app_id,church_id,name,email,address,phone_number,moving_date,english_skill,gender
+201,101,Applicant Name 1,emal1@email.ca,"Address, Toronto ON",647-111-1111,1/27/2021,Intermediate,Male
+202,102,Applicant Name 2,email2@email.ca,"Address, St John's, NL",709-111-1111,6/15/2020,Basic,Male
+203,103,Applicant Name 3,email3@email.com,"Address, Moncton, NB",506-111-1111,12/1/2021,Fluent,Male
