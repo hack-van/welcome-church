@@ -5,11 +5,11 @@ import * as React from 'react';
 const Menu = () => {
   return (
     <>
-    <button>Submit New Application</button>
-    <link to='./NewApplication'></link>
-    <button>View Existing Applications</button>
-  </>
-  )
-}
+      <button>Submit New Application</button>
+      <link to="./NewApplication"></link>
+      <button>View Existing Applications</button>
+    </>
+  );
+};
 
 export default Menu;

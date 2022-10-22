@@ -8,19 +8,20 @@ import {
   Route,
 } from 'react-router-dom';
 import HomePage from './pages/HomePage';
+import Login from './pages/Login';
 import Layout from './components/Layout';
 
-const App = () =>
-  (
+const App = () => {
+  const isUserLogin = false;
+  return (
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={isUserLogin ? <HomePage /> : <Login />} />
           {/* <Route path="child" element={<ChildComponent />} /> */}
         </Route>
       </Routes>
     </BrowserRouter>
-  )
-;
-
+  );
+};
 export default App;
