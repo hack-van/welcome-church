@@ -3,14 +3,14 @@ import InputField from '../components/shared/InputField';
 import Button from '../components/shared/Button';
 import './Login.scss';
 
-const Login = () => {
+const Login = ({ handleUserLogin }) => {
   return (
     <div className="box box-shadow login flex-center">
       <div className="inner-container">
         <h3>Login</h3>
         <InputField title="User name" placeholder="Enter user username" />
         <InputField title="Password" placeholder="Enter your passord" />
-        <Button title="Sign In" />
+        <Button title="Sign In" onClick={() => handleUserLogin(true)} />
       </div>
     </div>
   );

@@ -47,7 +47,7 @@
     "stylelint-config-standard-scss": "^5.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start",
     "build": "react-scripts build",
     "test": "jest --env=jsdom",
     "eject": "react-scripts eject",

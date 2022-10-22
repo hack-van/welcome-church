@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import logo from './logo.svg';
 import './App.scss';
 import {
@@ -12,12 +12,21 @@ import Login from './pages/Login';
 import Layout from './components/Layout';
 
 const App = () => {
-  const isUserLogin = false;
+  const [isUserLogin, setIsUserLogin] = useState(false);
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={isUserLogin ? <HomePage /> : <Login />} />
+          <Route
+            path="/"
+            element={
+              isUserLogin ? (
+                <HomePage />
+              ) : (
+                <Login handleUserLogin={setIsUserLogin} />
+              )
+            }
+          />
           {/* <Route path="child" element={<ChildComponent />} /> */}
         </Route>
       </Routes>
