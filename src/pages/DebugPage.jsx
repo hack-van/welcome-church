@@ -10,7 +10,8 @@ const DebugPage = () => {
 
   db.getAllChurchesAsync()
     .then((data) => setChurchInfo(data));
-  db.getAllApplicantsAsync().then((data) => setApplicants(data));
+  db.getAllApplicantsAsync()
+    .then((data) => setApplicants(data));
 
   return (
     <div>
