@@ -1,6 +1,7 @@
 /**
  * For HTML elements
  */
+@import "./variables.scss";
 
 * {
   border: 0;
@@ -28,4 +29,17 @@ body {
 img {
   object-fit: contain;
   max-width: 100%;
+}
+
+input,
+textarea {
+  border: 1px solid $grey;
+  border-radius: 4px;
+  font-size: $fontSmall;
+  padding: 0 6px;
+}
+
+textarea {
+  padding: 6px;
+  font-family: inherit;
 }
