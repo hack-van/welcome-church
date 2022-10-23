@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import Login from './pages/Login';
 import Layout from './components/Layout';
+import SelectChurches from './pages/SelectCurches';
 import DebugPage from './pages/DebugPage';
 import RegistrationForm from './pages/RegistrationForm';
 
@@ -24,6 +25,7 @@ const App = () => {
             }
           />
           <Route path="/registration" element={<RegistrationForm />} />
+          <Route path="/select-churches" element={<SelectChurches />} />
           <Route path="/debug" element={<DebugPage />} />
         </Route>
       </Routes>

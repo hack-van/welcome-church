@@ -1,13 +1,13 @@
 @import "../../variables.scss";
 
-label {
-  display: block;
-}
-
-input {
-  height: 32px;
-}
-
 .input-wrapper {
   margin-top: 24px;
+
+  input {
+    height: 32px;
+  }
+
+  label {
+    display: block;
+  }
 }
