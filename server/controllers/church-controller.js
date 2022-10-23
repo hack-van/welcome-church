@@ -1,33 +1,39 @@
 /* eslint-disable max-len */
 /* eslint-disable no-inline-comments */
 // Import database
-const knex = require('./db');
+const knex = require('../db');
 
-// Retrieve all applications
-exports.applicationsAll = async (req, res) => {
-  // Get all applications from database
+// Retrieve all churches
+exports.churchesAll = async (req, res) => {
+  // Get all churches from database
   await knex
     .select('*') // select all records
-    .from('applications') // from 'applications' table
-    .then(userData => {
-      // Send applications extracted from database in response
-      res.json(userData);
+    .from('churches') // from 'churches' table
+    .then(churchData => {
+      // Send churches extracted from database in response
+      res.json(churchData);
     })
     .catch(err => {
       // Send a error message in response
-      res.json({ message: `There was an error retrieving applications: ${err}` });
+      res.json({ message: `There was an error retrieving churches: ${err}` });
     });
 };
 
 // Create new application
-exports.applicationsCreate = async (req, res) => {
+exports.churchesCreate = async (req, res) => {
   // Add new application to database
-  await knex('applications')
+  await knex('churches')
     .insert({ // insert new record, a application
-      'author': req.body.author,
-      'title': req.body.title,
-      'pubDate': req.body.pubDate,
-      'rating': req.body.rating
+      'church_id': req.body.church_id,
+      'name': req.body.name,
+      'address': req.body.address,
+      'city': req.body.city,
+      'province': req.body.province,
+      'contact_person_name': req.body.contact_person_name,
+      'contact_person_email': req.body.contact_person_email,
+      'church_status': req.body.church_status,
+      'denomination': req.body.denomination,
+      'languages': req.body.languages,
     })
     .then(() => {
       // Send a success message in response
@@ -40,9 +46,9 @@ exports.applicationsCreate = async (req, res) => {
 };
 
 // Remove specific application
-exports.applicationsDelete = async (req, res) => {
+exports.churchesDelete = async (req, res) => {
   // Find specific application in the database and remove it
-  await knex('applications')
+  await knex('churches')
     .where('id', req.body.id) // find correct record based on id
     .del() // delete the record
     .then(() => {
@@ -55,12 +61,12 @@ exports.applicationsDelete = async (req, res) => {
     });
 };
 
-// Remove all applications on the list
-exports.applicationsReset = async (req, res) => {
-  // Remove all applications from database
+// Remove all churches on the list
+exports.churchesReset = async (req, res) => {
+  // Remove all churches from database
   await knex
     .select('*') // select all records
-    .from('applications') // from 'applications' table
+    .from('churches') // from 'churches' table
     .truncate() // remove the selection
     .then(() => {
       // Send a success message in response

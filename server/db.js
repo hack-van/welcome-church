@@ -3,8 +3,8 @@
 // Import path module
 const path = require('path');
 
-// Get the location of database.sqlite file
-const dbPath = path.resolve(__dirname, 'db/database.sqlite');
+// Get the location of database sqlite file
+const dbPath = path.resolve(__dirname, 'db/welcome-church-db.sqlite');
 
 // Create connection to SQLite database
 const knex = require('knex')({
@@ -33,7 +33,7 @@ knex.schema
         })
         .then(() => {
           // Log success message
-          console.log('Table \'Applications\' created');
+          console.log('Table \'Churches\' created');
         })
         .catch((error) => {
           console.error(`There was an error creating table: ${error}`);
@@ -50,43 +50,70 @@ knex.schema
       console.error(`There was an error setting up the database: ${error}`);
     });
 
-  // Create a table in the database called "applications"
-  // knex.schema
-  //   // Make sure no "applications" table exists
-  //   // before trying to create new
-  //   .hasTable('applications')
-  //     .then((exists) => {
-  //       if (!exists) {
-  //         // If no "applications" table exists
-  //         // create new, with "id", "author", "title",
-  //         // "pubDate" and "rating" columns
-  //         // and use "id" as a primary identification
-  //         // and increment "id" with every new record (application)
-  //         return knex.schema.createTable('applications', (table) => {
-  //           table.increments('id').primary();
-  //           table.string('author');
-  //           table.string('title');
-  //           table.string('pubDate');
-  //           table.integer('rating');
-  //         })
-  //         .then(() => {
-  //           // Log success message
-  //           console.log('Table \'Applications\' created');
-  //         })
-  //         .catch((error) => {
-  //           console.error(`There was an error creating table: ${error}`);
-  //         });
-  //       }
+knex.schema
+  .hasTable('Applications')
+    .then((exists) => {
+      if (!exists) {
+        return knex.schema.createTable('Applications', (table) => {
+          table.increments('appl_id').primary();
+          table.string('family_name').notNullable();
+          table.string('destination_city');
+          table.string('destination_province');
+          table.date('arrive_at_city_date');
+          table.string('english_proficiency');
+          table.string('short_family_description');
+        })
+        .then(() => {
+          console.log('Table \'Applications\' created');
+        })
+        .catch((error) => {
+          console.error(`There was an error creating table: ${error}`);
+        });
+      }
 
-  //       return false;
-  //     })
-  //     .then(() => {
-  //       // Log success message
-  //       console.log('done');
-  //     })
-  //     .catch((error) => {
-  //       console.error(`There was a error setting up the database: ${error}`);
-  //     });
+      return false;
+    })
+    .then(() => {
+      console.log('done');
+    })
+    .catch((error) => {
+      console.error(`There was a error setting up the database: ${error}`);
+    });
+
+knex.schema
+  .hasTable('Application_Transactions')
+    .then((exists) => {
+      if (!exists) {
+        return knex.schema.createTable('Application_Transactions', (table) => {
+          table.integer('appl_id').notNullable();
+          table.integer('receiver_church_id');
+          table.integer('receiver_is_willing');
+          table.integer('sender_accepted_receiver');
+          table.integer('sender_notified_receiver');
+          table.integer('encrypted_file_key');
+          table.integer('encrypted_file_download_count');
+          table.foreign('receiver_church_id')
+            .references('appl_id')
+            .inTable('Applicants');
+          table.primary(['appl_id', 'receiver_church_id']);
+        })
+        .then(() => {
+          console.log('Table \'Application_Transactions\' created');
+        })
+        .catch((error) => {
+          console.error(`There was an error creating table: ${error}`);
+        });
+      }
+
+      return false;
+    })
+    .then(() => {
+      // Log success message
+      console.log('done');
+    })
+    .catch((error) => {
+      console.error(`There was a error setting up the database: ${error}`);
+    });
 
 // Just for debugging purposes:
 // Log all data in "applications" table

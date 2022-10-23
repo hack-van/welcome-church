@@ -44,7 +44,7 @@ const databaseHelper = {
     `);
 
     const resultApplications = db.run(`
-      CREATE TABLE IF Applicants (
+      CREATE TABLE IF Applications (
         appl_id Primary Key,
         family_name TEXT NOT NULL,
         destination_city TEXT NOT NULL,

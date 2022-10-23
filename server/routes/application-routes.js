@@ -2,7 +2,7 @@
 const express = require('express');
 
 // Import applications-controller
-const applicationsRoutes = require('./application-controller');
+const applicationsRoutes = require('../controllers/application-controller');
 
 // Create router
 const router = express.Router();
