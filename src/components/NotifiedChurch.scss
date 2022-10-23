@@ -1,0 +1,52 @@
+.container{
+  width: 600px;
+  height: 220px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 7px 0 rgb(129 129 129 / 85%);
+}
+
+.messages{
+  margin: 35px;
+}
+
+.message1{
+  margin-bottom: 10px;
+}
+
+.message2{
+  color: grey;
+}
+
+.buttons{
+  width: 315px;
+  justify-content: space-between;
+  display: flex;
+  margin-left: 230px;
+}
+
+.button-family{
+  width: 150px;
+  height: 45px;
+  padding: 16px 0;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 25%);
+  border-radius: 4px;
+  font-size: inherit;
+  margin-top: 32px;
+  &:hover {
+    background-color: #23bbff;
+  }
+}
+
+.button-menu{
+  width: 150px;
+  height: 45px;
+  padding: 16px 0;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 25%);
+  border-radius: 4px;
+  font-size: inherit;
+  margin-top: 32px;
+  background-color: white;
+  &:hover {
+    background-color: #23bbff;
+  }
+}

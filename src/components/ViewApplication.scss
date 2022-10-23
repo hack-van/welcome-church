@@ -1,0 +1,52 @@
+.date {
+  font-weight: bold;
+  color: rgb(50, 105, 223);
+  padding-bottom: 10px;
+}
+.description {
+  padding: 15px 0 15px 0;
+  color: grey;
+}
+.family {
+  font-weight: bold;
+}
+.responses {
+  border-radius: 30px;
+  padding: 10px;
+  color: rgb(45, 68, 132);
+  background-color: rgb(214, 222, 245);
+}
+
+.approvals {
+  flex-wrap: wrap;
+  border-radius: 30px;
+  padding: 10px;
+  margin-left: 10px;
+  color: rgb(86, 44, 101);
+  background-color: rgb(211, 194, 211);
+}
+
+.res-approval {
+  display: flex;
+  width: 270px;
+  justify-content: space-between;
+
+}
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px;
+
+}
+.card-item{
+  flex-wrap: wrap;
+  width: calc(33% - 15px);
+  margin-bottom: 30px;
+}
+
+
+
+
+
