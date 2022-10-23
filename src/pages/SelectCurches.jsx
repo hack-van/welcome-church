@@ -1,7 +1,6 @@
 import * as React from 'react';
-import InputField from '../components/shared/InputField';
+import SearchField from '../components/shared/SearchField';
 import Button from '../components/shared/Button';
-import CheckBox from '../components/shared/CheckBox';
 
 const SelectChurches = () => {
   return (
@@ -12,16 +11,13 @@ const SelectChurches = () => {
           Select churches you wish to send a request to.
         </p>
         <div className="flex">
-          <div className="partition">
-            <h4>Filter churches based on:</h4>
-            <InputField title="Denomination" placeholder="Denomination" />
-            <Button title="Filter Churches" />
-          </div>
-          <div className="partition">
-            <h4>Accepted Churches:</h4>
-            <CheckBox content="Brentwood Park Church" />
-          </div>
+          <SearchField
+            title="Search by names, tags, denomination, or languages supported."
+            placeholder="Enter search criteria (autofill)"
+          ></SearchField>
         </div>
+        <div></div>
+        <Button title="Review Request" />
       </div>
     </div>
   );
