@@ -1,8 +1,12 @@
 import * as React from 'react';
 import './Button.scss';
 
-const Button = ({ title }) => {
-  return <button type="button">{title}</button>;
+const Button = ({ title, onClick }) => {
+  return (
+    <button type="button" onClick={onClick}>
+      {title}
+    </button>
+  );
 };
 
 export default Button;

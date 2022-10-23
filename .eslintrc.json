@@ -77,7 +77,7 @@
       "all",
       {
         "nestedBinaryExpressions": false,
-        "ignoreJSX": "multi-line",
+        "ignoreJSX": "all",
         "enforceForFunctionPrototypeMethods": false
       }
     ],

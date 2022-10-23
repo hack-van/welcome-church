@@ -1,16 +1,11 @@
-@import '../../variables.scss';
+@import "../../variables.scss";
 
 label {
   display: block;
 }
 
 input {
-  border: 1px solid $grey;
-  border-radius: 4px;
   height: 32px;
-  font-size: $fontSmall;
-  width: 100%;
-  padding: 0 6px;
 }
 
 .input-wrapper {
