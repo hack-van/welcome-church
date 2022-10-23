@@ -10,6 +10,7 @@ import NotifyChurches from './pages/NotifyChurches';
 import RegistrationForm from './pages/RegistrationForm';
 import ViewApplication from './components/ViewApplication';
 import NotifiedChurch from './components/NotifiedChurch';
+import ReceiveEmail from './components/ReceiveEmail';
 
 const App = () => {
   const [isUserLogin, setIsUserLogin] = useState(false);
@@ -26,6 +27,7 @@ const App = () => {
             }
           />
           <Route path="/notified-church" element={<NotifiedChurch />}/>
+          <Route path="/receive-email" element={<ReceiveEmail />}/>
           <Route path="/view-application" element={<ViewApplication />}/>
           <Route path="/registration" element={<RegistrationForm />} />
           <Route path="/select-churches" element={<SelectChurches />} />
