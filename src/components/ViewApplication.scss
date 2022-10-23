@@ -1,0 +1,34 @@
+.card-container {
+  width: 300px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+}
+.date {
+  font-weight: bold;
+  color: rgb(50, 105, 223);
+  padding-bottom: 10px;
+}
+.description {
+  padding: 15px 0 15px 0;
+  color: grey;
+}
+.family {
+  font-weight: bold;
+}
+.responses {
+  border-radius: 25%;
+  padding: 5px;
+  color: rgb(45, 68, 132);
+  background-color: rgb(214, 222, 245);
+}
+
+.approvals {
+  border-radius: 25%;
+  padding: 5px;
+  color: rgb(86, 44, 101);
+  background-color: rgb(211, 194, 211);
+}
+
+.res-approval {
+  display: flex;
+}
