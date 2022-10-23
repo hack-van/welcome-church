@@ -5,7 +5,7 @@ import Button from '../components/shared/Button';
 const HomePage = () => {
   const navigate = useNavigate();
   return (
-    <div className="box login flex-center">
+    <div className="box login flex align-center content-center">
       <div className="inner-container">
         <h3>Menu</h3>
         <Button

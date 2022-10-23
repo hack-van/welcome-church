@@ -5,10 +5,17 @@ body {
   font-size: $fontMedium;
 }
 
-.flex-center {
+.flex {
   display: flex;
-  justify-content: center;
-  align-items: center;
+
+  .align-center {
+    display: flex;
+    align-items: center;
+
+    &.content-center {
+      justify-content: center;
+    }
+  }
 }
 
 .section {
@@ -29,4 +36,16 @@ body {
 footer,
 header {
   height: 60px;
+}
+
+.input-wrapper {
+  input,
+  textarea {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+
+.partition {
+  width: 50%;
 }

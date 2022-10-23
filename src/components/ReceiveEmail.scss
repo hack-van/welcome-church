@@ -1,37 +1,40 @@
-.greeting{
+.greeting {
   margin-bottom: 20px;
 }
-.confirm{
-  margin:20px 0 20px 0;
+
+.confirm {
+  margin: 20px 0;
 }
 
-.description{
+.description {
   margin-top: 30px;
 }
 
-.family-info{
+.family-info {
   display: flex;
-  margin:20px 0 20px 0;
+  margin: 20px 0;
 }
 
-.big-div{
-  margin:30px;
+.big-div {
+  margin: 30px;
 }
 
-.btn-no{
+.btn-no {
   width: 45%;
   height: 70px;
-  margin: 20px 10px 20px 0
-}
-.btn-yes{
-  width: 45%;
-  height: 70px;
-  background-color: #23BBFF;
+  margin: 20px 10px 20px 0;
 }
 
-.contact{
+.btn-yes {
+  width: 45%;
+  height: 70px;
+  background-color: #23bbff;
+}
+
+.contact {
   margin-top: 30px;
 }
-.thanks{
+
+.thanks {
   margin-top: 50px;
 }

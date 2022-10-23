@@ -5,7 +5,7 @@ import './Login.scss';
 
 const Login = ({ handleUserLogin }) => {
   return (
-    <div className="box login flex-center">
+    <div className="box login flex align-center content-center">
       <div className="inner-container">
         <h3>Login</h3>
         <InputField title="User name" placeholder="Enter user username" />
