@@ -118,8 +118,16 @@ knex.schema
 // Just for debugging purposes:
 // Log all data in "applications" table
 knex.select('*').from('churches')
-  .then(data => console.log('data:', data))
+.then(data => console.log('churches data:', data))
+.catch(err => console.log(err));
+
+knex.select('*').from('Applications')
+  .then(data => console.log('Applications data:', data))
   .catch(err => console.log(err));
+
+knex.select('*').from('Application_Transactions')
+.then(data => console.log('Application_Transactions data:', data))
+.catch(err => console.log(err));
 
 // Export the database
 module.exports = knex;

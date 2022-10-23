@@ -1,16 +1,14 @@
 import * as React from 'react';
-import databaseHelper from '../helper/databaseHelper';
+import { getAllChurchesAsync, getAllApplicantsAsync } from '../helper/databaseHelper';
 // import Layout from '../components/Layout';
 
 const DebugPage = () => {
-  const db = databaseHelper;
-
   const [churchInfo, setChurchInfo] = React.useState({});
   const [applicants, setApplicants] = React.useState({});
 
-  db.getAllChurchesAsync()
+  getAllChurchesAsync()
     .then((data) => setChurchInfo(data));
-  db.getAllApplicantsAsync()
+  getAllApplicantsAsync()
     .then((data) => setApplicants(data));
 
   return (
