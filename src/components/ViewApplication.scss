@@ -1,8 +1,3 @@
-.card-container {
-  width: 300px;
-  overflow: hidden;
-  box-shadow: 0px 0px 15px -5px;
-}
 .date {
   font-weight: bold;
   color: rgb(50, 105, 223);
@@ -16,19 +11,42 @@
   font-weight: bold;
 }
 .responses {
-  border-radius: 25%;
-  padding: 5px;
+  border-radius: 30px;
+  padding: 10px;
   color: rgb(45, 68, 132);
   background-color: rgb(214, 222, 245);
 }
 
 .approvals {
-  border-radius: 25%;
-  padding: 5px;
+  flex-wrap: wrap;
+  border-radius: 30px;
+  padding: 10px;
+  margin-left: 10px;
   color: rgb(86, 44, 101);
   background-color: rgb(211, 194, 211);
 }
 
 .res-approval {
   display: flex;
+  width: 270px;
+  justify-content: space-between;
+
 }
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px;
+
+}
+.card-item{
+  flex-wrap: wrap;
+  width: calc(33% - 15px);
+  margin-bottom: 30px;
+}
+
+
+
+
+

@@ -7,6 +7,7 @@ import Layout from './components/Layout';
 import DebugPage from './pages/DebugPage';
 import RegistrationForm from './pages/RegistrationForm';
 import ViewApplication from './components/ViewApplication';
+import NotifiedChurch from './components/NotifiedChurch';
 
 const App = () => {
   const [isUserLogin, setIsUserLogin] = useState(false);
@@ -24,6 +25,7 @@ const App = () => {
               )
             }
           />
+          <Route path="/notified-church" element={<NotifiedChurch />}/>
           <Route path="/view-application" element={<ViewApplication />}/>
           <Route path="/registration" element={<RegistrationForm />} />
           <Route path="/debug" element={<DebugPage />} />

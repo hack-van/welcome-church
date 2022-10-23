@@ -26,22 +26,45 @@ export default function ViewAppCard() {
       family:'Valentine',
       responses:'2',
       approvals:'0'
+    },
+    {
+      date:'4 Feb 2022',
+      family:'Tsai',
+      responses:'7',
+      approvals:'2'
+    },
+    {
+      date:'4 Feb 2022',
+      family:'Wong',
+      responses:'5',
+      approvals:'1'
+    },
+    {
+      date:'29 Feb 2022',
+      family:'Valentine',
+      responses:'2',
+      approvals:'0'
     }
   ];
 
-  return data.map((element) => (
-    <Card sx={{ maxWidth: 360 }}>
-      <CardMedia className="image" component="img" height="140" image="https://thumbs.dreamstime.com/b/happy-family-mother-father-children-son-daughter-sunset-nature-150794881.jpg" alt="imgAlt" />
-      <CardContent>
-        <Typography className="date">Date Created:{element.date}</Typography>
-        <Typography className="family" variant='h5' component="div">{element.family} Family</Typography>
-        <Typography className="description" component="div">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum corporis ipsum!</Typography>
-        <div className='res-approval'>
-          <Typography className="responses">{element.responses} Responses</Typography>
-          <Typography className="approvals">{element.approvals} Approvals Sent</Typography>
-        </div>
-      </CardContent>
-    </Card>
-  ));
+  return (
+    <div className="card-container">
+      { data.map((element) => (
+        <Card className='card-item'>
+          <CardMedia className="image" component="img" height="140" image="https://thumbs.dreamstime.com/b/happy-family-mother-father-children-son-daughter-sunset-nature-150794881.jpg" alt="imgAlt" />
+          <CardContent>
+            <Typography className="date">Date Created:{element.date}</Typography>
+            <Typography className="family" variant='h5' component="div">{element.family} Family</Typography>
+            <Typography className="description" component="div">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam maxime id doloribus iure commodi quaerat fugit cupiditate similique officia molestias? Exercitationem tempore!</Typography>
+            <div className='res-approval'>
+              <Typography className="responses">{element.responses} Responses</Typography>
+              <Typography className="approvals">{element.approvals} Approvals Sent</Typography>
+            </div>
+          </CardContent>
+        </Card>
+      ))
+      }
+    </div>
+  );
 }
 
