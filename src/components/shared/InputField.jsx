@@ -7,12 +7,18 @@ const InputField = ({
   placeholder = '',
   isHalfWidth = false,
   type = 'text',
+  name = title,
+  onInput,
 }) => {
   const className = classNames('input-wrapper', { 'half-width': isHalfWidth });
   return (
     <div className={className}>
-      <label>{title}</label>
-      <input type={type} name="username" placeholder={placeholder} />
+      <label htmlFor={name}>{title}</label>
+      <input
+        type={type}
+        name={name}
+        placeholder={placeholder}
+        onInput={onInput} />
     </div>
   );
 };
