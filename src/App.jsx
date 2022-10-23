@@ -1,16 +1,11 @@
 import React, { useState } from 'react';
-// import logo from './logo.svg';
 import './App.scss';
-import {
-  BrowserRouter,
-  Routes,
-  // Link,
-  Route,
-} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import Login from './pages/Login';
 import Layout from './components/Layout';
 import DebugPage from './pages/DebugPage';
+import RegistrationForm from './pages/RegistrationForm';
 
 const App = () => {
   const [isUserLogin, setIsUserLogin] = useState(false);
@@ -28,6 +23,7 @@ const App = () => {
               )
             }
           />
+          <Route path="/registration" element={<RegistrationForm />} />
           <Route path="/debug" element={<DebugPage />} />
         </Route>
       </Routes>
