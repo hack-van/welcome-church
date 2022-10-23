@@ -1,0 +1,20 @@
+@import '../../variables.scss';
+
+.search-input {
+  position: relative;
+  width: 100%;
+}
+.drop-down-list {
+  position: absolute;
+  width: 100%;
+  .drop-down-item {
+    background: #fff;
+    padding: 10px 6px;
+    margin: 0;
+    text-align: left;
+    border-radius: 0;
+    &:hover {
+      background: $primaryColor;
+    }
+  }
+}
