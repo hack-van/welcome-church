@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Layout from './components/Layout';
 import SelectChurches from './pages/SelectCurches';
 import DebugPage from './pages/DebugPage';
+import NotifyChurches from './pages/NotifyChurches';
 import RegistrationForm from './pages/RegistrationForm';
 
 const App = () => {
@@ -17,16 +18,15 @@ const App = () => {
           <Route
             path="/"
             element={
-              isUserLogin ? (
-                <HomePage />
-              ) : (
-                <Login handleUserLogin={setIsUserLogin} />
-              )
+              isUserLogin
+                ? <HomePage />
+                : <Login handleUserLogin={setIsUserLogin} />
             }
           />
           <Route path="/registration" element={<RegistrationForm />} />
           <Route path="/select-churches" element={<SelectChurches />} />
           <Route path="/debug" element={<DebugPage />} />
+          <Route path="/notify" element={<NotifyChurches />} />
         </Route>
       </Routes>
     </BrowserRouter>

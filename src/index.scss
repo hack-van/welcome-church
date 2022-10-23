@@ -1,3 +1,6 @@
+/**
+ * For HTML elements
+ */
 @import "./variables.scss";
 
 * {
@@ -39,4 +42,14 @@ textarea {
 textarea {
   padding: 6px;
   font-family: inherit;
+}
+
+p {
+  margin: 1em 0;
+}
+
+// Headers
+h1 {
+  font-size: 2.3rem;
+  margin: 1em 0;
 }
