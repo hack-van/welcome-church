@@ -1,6 +1,6 @@
-church_id,name,address,city,province,contact_person_name,contact_person_email,church_status
-101,Church 1,Address of Church 1,North York,ON,Contact Person 1,contact1@email.ca,For_Review
-102,Church 2,Address of Church 2,Toronto,ON,Contact Person 2,contact2@email.ca,For_Review
-103,Church 3,Address of Church 3,Markham,ON,Contact Person 3,contact3@email.ca,Approved
-104,Church 4,Address of Church 4,Calgary,ON,Contact Person 4,contact4@email.ca,Approved
-105,Church 5,Address of Church 5,Barrie,ON,Contact Person 5,contact5@email.ca,Approved
+church_id,name,address,city,province,contact_person_name,contact_person_email,church_status,denomination,languages
+101,Church 1,Address of Church 1,North York,ON,Contact Person 1,contact1@email.ca,For_Review,"Baptist","English, French"
+102,Church 2,Address of Church 2,Toronto,ON,Contact Person 2,contact2@email.ca,For_Review,"Baptist","English, French"
+103,Church 3,Address of Church 3,Markham,ON,Contact Person 3,contact3@email.ca,Approved,"Baptist","English, French"
+104,Church 4,Address of Church 4,Calgary,ON,Contact Person 4,contact4@email.ca,Approved,"Baptist","English, French"
+105,Church 5,Address of Church 5,Barrie,ON,Contact Person 5,contact5@email.ca,Approved,"Baptist","English, French"

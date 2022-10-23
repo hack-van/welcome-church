@@ -24,7 +24,9 @@ const objectHasAllKeys =
  * Get all the churches in the database
  * @returns array[objects]
  */
-export const getAllChurchesAsync = () => dbFaker.getAllChurchesAsync();
+export const getAllChurchesAsync = () => axios
+  .get('http://localhost:4001/churches/all')
+  .then((response) => response.data);
 
 /**
  * Get all the applicants in the database

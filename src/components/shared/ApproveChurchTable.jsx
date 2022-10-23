@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ApproveChurch, { APPROVE_CHURCH_SEND_PRIVATE_INFO } from './ApproveChurch';
+import ApproveChurch from './ApproveChurch';
 import CheckBox from './CheckBox';
 import './ApproveChurchTable.scss';
 
@@ -27,9 +27,11 @@ const ApproveChurchTable = ({ title, churchesData, classNameModfier }) => {
           churchesData.map((churchData) => (
             <ApproveChurch
               key={churchData.church_id}
+              churchId={churchData.church_id}
               classNameModfier={classNameModfier}
               churchData={churchData}
-              variant={APPROVE_CHURCH_SEND_PRIVATE_INFO} />
+              // variant={APPROVE_CHURCH_SEND_PRIVATE_INFO}
+            />
           ))
         }
       </div>
