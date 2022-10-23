@@ -18,11 +18,9 @@ const App = () => {
           <Route
             path="/"
             element={
-              isUserLogin ? (
-                <HomePage />
-              ) : (
-                <Login handleUserLogin={setIsUserLogin} />
-              )
+              isUserLogin
+                ? <HomePage />
+                : <Login handleUserLogin={setIsUserLogin} />
             }
           />
           <Route path="/registration" element={<RegistrationForm />} />

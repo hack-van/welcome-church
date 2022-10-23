@@ -2,10 +2,7 @@
 import * as React from 'react';
 import ApproveChurchTable from '../components/shared/ApproveChurchTable';
 import databaseHelper from '../helper/databaseHelper';
-// import { useParams } from 'react-router-dom'
-// import Button from '../components/shared/Button';
-
-// import './Login.scss';
+import './NotifyChurches.scss';
 
 const NotifyChurches = () => {
   const db = databaseHelper;
@@ -35,7 +32,7 @@ const NotifyChurches = () => {
           </p>
         </div>
         <div className="approved-church-table">
-          <ApproveChurchTable churchesData={churchesData} classNameModfier="notify"/>
+          <ApproveChurchTable title="Notify Churches" churchesData={churchesData} classNameModfier="notify"/>
         </div>
       </div>
     </div>
