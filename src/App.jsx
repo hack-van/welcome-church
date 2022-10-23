@@ -11,6 +11,7 @@ import HomePage from './pages/HomePage';
 import Login from './pages/Login';
 import Layout from './components/Layout';
 import DebugPage from './pages/DebugPage';
+import NotifyChurches from './pages/NotifyChurches';
 
 const App = () => {
   const isUserLogin = false;
@@ -20,6 +21,7 @@ const App = () => {
         <Route element={<Layout />}>
           <Route path="/" element={isUserLogin ? <HomePage /> : <Login />} />
           <Route path="/debug" element={<DebugPage />} />
+          <Route path="/notify" element={<NotifyChurches />} />
         </Route>
       </Routes>
     </BrowserRouter>
