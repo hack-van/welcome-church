@@ -1,12 +1,10 @@
 /* eslint-disable max-len */
 import * as React from 'react';
 import ApproveChurchTable from '../components/shared/ApproveChurchTable';
-import databaseHelper from '../helper/databaseHelper';
+import { getAllChurchesAsync } from '../helper/databaseHelper';
 import './NotifyChurches.scss';
 
 const NotifyChurches = () => {
-  const db = databaseHelper;
-
   const [familyName, setFamilyName] = React.useState('');
   const [churchesData, setChurchesData] = React.useState([]);
 
@@ -16,7 +14,7 @@ const NotifyChurches = () => {
   }, 800);
 
   // TODO: Replace with actual calls
-  db.getAllChurchesAsync()
+  getAllChurchesAsync()
     .then((data) => setChurchesData(data));
 
   return (
