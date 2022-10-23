@@ -24,16 +24,13 @@ exports.applicationsCreate = async (req, res) => {
   // Add new application to database
   await knex('applications')
     .insert({ // insert new record, a application
-      'church_id': req.body.church_id,
-      'name': req.body.name,
-      'address': req.body.address,
-      'city': req.body.city,
-      'province': req.body.province,
-      'contact_person_name': req.body.contact_person_name,
-      'contact_person_email': req.body.contact_person_email,
-      'church_status': req.body.church_status,
-      'denomination': req.body.denomination,
-      'languages': req.body.languages,
+      'appl_id': req.body.appl_id,
+      'family_name': req.body.family_name,
+      'destination_city': req.body.destination_city,
+      'destination_province': req.body.destination_province,
+      'arrive_at_city_date': req.body.arrive_at_city_date,
+      'english_proficiency': req.body.english_proficiency,
+      'short_family_description': req.body.short_family_description,
     })
     .then(() => {
       // Send a success message in response
@@ -49,7 +46,7 @@ exports.applicationsCreate = async (req, res) => {
 exports.applicationsDelete = async (req, res) => {
   // Find specific application in the database and remove it
   await knex('applications')
-    .where('id', req.body.id) // find correct record based on id
+    .where('appl_id', req.body.appl_id) // find correct record based on id
     .del() // delete the record
     .then(() => {
       // Send a success message in response

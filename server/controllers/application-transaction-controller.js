@@ -24,16 +24,13 @@ exports.applicationsTransactionCreate = async (req, res) => {
   // Add new application to database
   await knex('applicationsTransaction')
     .insert({ // insert new record, a application
-      'church_id': req.body.church_id,
-      'name': req.body.name,
-      'address': req.body.address,
-      'city': req.body.city,
-      'province': req.body.province,
-      'contact_person_name': req.body.contact_person_name,
-      'contact_person_email': req.body.contact_person_email,
-      'church_status': req.body.church_status,
-      'denomination': req.body.denomination,
-      'languages': req.body.languages,
+      'appl_id': req.body.appl_id,
+      'receiver_church_id': req.body.receiver_church_id,
+      'receiver_is_willing': req.body.receiver_is_willing,
+      'sender_accepted_receiver': req.body.sender_accepted_receiver,
+      'sender_notified_receiver': req.body.sender_notified_receiver,
+      'encrypted_file_key': req.body.encrypted_file_key,
+      'encrypted_file_download_count': req.body.encrypted_file_download_count,
     })
     .then(() => {
       // Send a success message in response
@@ -49,7 +46,7 @@ exports.applicationsTransactionCreate = async (req, res) => {
 exports.applicationsTransactionDelete = async (req, res) => {
   // Find specific application in the database and remove it
   await knex('applicationsTransaction')
-    .where('id', req.body.id) // find correct record based on id
+    .where('appl_id', req.body.appl_id) // find correct record based on id
     .del() // delete the record
     .then(() => {
       // Send a success message in response

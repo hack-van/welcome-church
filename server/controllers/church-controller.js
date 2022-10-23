@@ -49,7 +49,7 @@ exports.churchesCreate = async (req, res) => {
 exports.churchesDelete = async (req, res) => {
   // Find specific application in the database and remove it
   await knex('churches')
-    .where('id', req.body.id) // find correct record based on id
+    .where('church_id', req.body.church_id) // find correct record based on id
     .del() // delete the record
     .then(() => {
       // Send a success message in response
