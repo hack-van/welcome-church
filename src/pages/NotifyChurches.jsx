@@ -35,7 +35,7 @@ const NotifyChurches = () => {
           </p>
         </div>
         <div className="approved-church-table">
-          <ApproveChurchTable churchesData={churchesData}/>
+          <ApproveChurchTable churchesData={churchesData} classNameModfier="notify"/>
         </div>
       </div>
     </div>
